@@ -1,0 +1,23 @@
+<%- include('../inc/head') %>
+    <%- include('../inc/header') %>
+        <div class="title__phone">
+            <h1>All phones</h1>
+            
+        </div>
+        <div class="container__phone">
+            <% items.forEach((item)=>{ %>
+                <div class="phone">
+                    <br><a href="<%= `/phone/${item.id}` %>">
+                        <%= item.name %>
+                        <div class="wrapper__img">
+                            <img src="<%= item.img %>" alt="img">
+                        </div>
+                        <div class="item__price">
+                            Price:
+                            <%= item.price %>
+                        </div>
+                    </a>
+                </div>
+            <% })%>
+        </div>
+        
